@@ -52,4 +52,13 @@ class TaskController extends Controller
         $task->delete();
         return redirect()->route('task.index')->with('success','Contact deleted successfully');
     }
+
+    public function valid(Request $request)
+    {
+        // Validate and store the blog post...
+
+        $validatedData = $request->validate([
+            'name' => 'required|unique:tasks|max:2|min:1',
+        ]); 
+    }
 }
