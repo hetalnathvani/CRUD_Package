@@ -1,0 +1,20 @@
+{
+    "name": "hetal/crud",
+    "description": "This package is based on CRUD operations.",
+    "type": "package",
+    "authors": [
+        {
+            "name": "Hetal Nathvani",
+            "email": "hetal.nathvani@cygnetinfotech.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/packages/hetal/crud"
+        }
+    ],
+    "require": {
+        "laravelcollective/html" : "6.0.3"
+    }
+}
