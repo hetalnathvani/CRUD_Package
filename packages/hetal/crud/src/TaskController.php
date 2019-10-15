@@ -42,7 +42,7 @@ class TaskController extends Controller
         return view('crud::edit', compact('tasks', 'task', 'submit'));
     }
 
-    public function update(Request $request, Task $task, $id)
+    public function update(Request $request, $id)
     {
         $data= $request->all();
         
