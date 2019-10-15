@@ -26,6 +26,10 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|alpha|max:255'
+        ]);
+
         Task::create($request->all());
         return redirect()->route('task.index');
     }
