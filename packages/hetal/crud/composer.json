@@ -14,6 +14,13 @@
             "url": "/packages/hetal/crud"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hetal\\Crud\\TodolistServiceProvider"
+            ]
+        }
+    },
     "require": {
         "laravelcollective/html" : "6.0.3"
     }

@@ -23,6 +23,13 @@ class pkgTest extends TestCase
         $response->assertStatus(200);
     }
 
+    public function testTasksInDbFailed()
+    {
+        $response = $this->assertDatabaseMissing('tasks', [
+            'name' => 'Hetalhjdsfg',
+        ]); 
+    }
+
     public function testCreateTask()
     {
         // $response = $this->get('/task/create');
@@ -30,6 +37,7 @@ class pkgTest extends TestCase
         // $response->assertStatus(200);
 
         $task = factory('App\Task')->create();
+        
         $response = $this->post('/task/create', $task->toArray());
         //Counts the number of users listed   
         
