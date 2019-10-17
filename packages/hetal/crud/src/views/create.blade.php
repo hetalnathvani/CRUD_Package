@@ -21,7 +21,7 @@
 @endif
 
 
-<form action="{{ route('task.store') }}" method="POST">
+<form action="{{ route('store') }}" method="POST">
     @csrf
     <script>
         function myFunction() {

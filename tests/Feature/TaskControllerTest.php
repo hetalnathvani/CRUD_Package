@@ -2,27 +2,49 @@
 
 namespace Tests\Feature;
 
-use App\User;
-use Tests\TestCase;
-use App\Task;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Tests\TestCase;
 
-class pkgTest extends TestCase
+class TaskControllerTest extends TestCase
 {
     /**
-     * A basic feature test example.
+     * A basic test example.
      *
      * @return void
      */
-    
+    public function testBasicTest()
+    {
+        $this->followingRedirects()
+                    ->post('/task/store', ['name' => 'Anushka'])
+                    ->assertStatus(200);
+    }
+     /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testNumericNameTest()
+    {
+        $this->withExceptionHandling()->followingRedirects()
+                    ->post('/task/store', ['name' => 131235])
+                    ->assertSessionHasErrors('name');
+    }
+
+    public function testEmptyNameTest()
+    {
+        $this->withExceptionHandling()->followingRedirects()
+                    ->post('/task/store', ['name' => ' '])
+                    ->assertSessionHasErrors('name');
+    }
+
     public function testListedTasks()
     {
         $response = $this->get('/task');
         $response->assertSuccessful();
         $response->assertStatus(200);
     }
-
+    
     public function testTasksInDbFailed()
     {
         $response = $this->assertDatabaseMissing('tasks', [
@@ -30,21 +52,6 @@ class pkgTest extends TestCase
         ]); 
     }
 
-    public function testCreateTask()
-    {
-        // $response = $this->get('/task/create');
-        // $response->assertSuccessful();
-        // $response->assertStatus(200);
-
-        $task = factory('App\Task')->create();
-        
-        $response = $this->post('/task/create', $task->toArray());
-        //Counts the number of users listed   
-        
-        $response->assertSee($task->name);
-    }
-
-    
     public function testUpdateTask()
     {
         $task = factory('App\Task')->create();
@@ -56,7 +63,6 @@ class pkgTest extends TestCase
         $task->update();
         $response = $this->assertDatabaseHas('tasks',['name'=> $task->name ]); 
     }
-
     public function testDeleteTask()
     {
         $task = factory('App\Task')->create();
