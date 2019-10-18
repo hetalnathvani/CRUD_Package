@@ -10,8 +10,8 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::resource('/task', 'hetal\crud\TaskController');
     Route::post('/task/store', 'hetal\crud\TaskController@store')->name('store');
-
+    Route::post('/task/{id}/edit', 'hetal\crud\TaskController@update');
 });
 
 Route::post('/task/store', 'hetal\crud\TaskController@store')->name('store');
-Route::post('/task', 'hetal\crud\TaskController@index')->name('list');
+// Route::post('/task', 'hetal\crud\TaskController@index')->name('list');

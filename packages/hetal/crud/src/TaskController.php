@@ -44,9 +44,13 @@ class TaskController extends Controller
 
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'name' => 'required|alpha|max:255'
+        ]);
+       
         $data= $request->all();
-        
-        Task::find($id)->update(['name' => $data['name']]); 
+       
+        Task::find($id)->update(['name' => $data['name']]);  
         return redirect()->route('task.index')->with('success','Product updated successfully');                
     }
 

@@ -73,4 +73,24 @@ class TaskControllerTest extends TestCase
         $task->delete();
         $this->assertDatabaseMissing('tasks',['id'=> $task->id]);
     }
+
+    public function testUpdateNullTask()
+    {
+        $task = factory('App\Task')->create();
+        $response = $this->get('/task/'.$task->id.'/edit');
+        $response->assertStatus(200);
+        $data=['name' => ' '];
+        $edit = $this->post('/task/'.$task->id.'/edit', $data);
+        $edit->assertStatus(302);
+    }
+
+    public function testUpdateNumericTask()
+    {
+        $task = factory('App\Task')->create();
+        $response = $this->get('/task/'.$task->id.'/edit');
+        $response->assertStatus(200);
+        $data=['name' => '1234'];
+        $edit = $this->post('/task/'.$task->id.'/edit', $data);
+        $edit->assertStatus(302);
+    }
 }
