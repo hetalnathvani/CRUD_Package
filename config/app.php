@@ -175,7 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         hetal\crud\TodolistServiceProvider::class,
-
+        check\ip\CheckIpServiceProvider::class,
     ],
 
     /*

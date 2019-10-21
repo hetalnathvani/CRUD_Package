@@ -48,7 +48,8 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "hetal\\crud\\": "packages/hetal/crud/src"
+            "hetal\\crud\\": "packages/hetal/crud/src",
+            "check\\ip\\": "packages/check/ip/src"
         },
         "classmap": [
             "database",

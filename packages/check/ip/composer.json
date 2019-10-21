@@ -1,0 +1,11 @@
+{
+    "name": "check/ip",
+    "description": "This Package basicall checks the Visitor IP and allow access accordingly.",
+    "authors": [
+        {
+            "name": "Hetal Nathvani",
+            "email": "hetal.nathvani@cygnetinfotech.com"
+        }
+    ],
+    "require": {}
+}
