@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d098053abd4872d41e142ac4def54e58",
+    "content-hash": "dcef50bb8d49da5450644b9f08ffb6ba",
     "packages": [
         {
             "name": "check/ip",
-            "version": "dev-master",
+            "version": "dev-check_access",
             "dist": {
                 "type": "path",
                 "url": "packages/check/ip",

@@ -25,7 +25,7 @@
     ],
     "require": {
         "php": "^7.2",
-        "check/ip": "dev-master",
+        "check/ip": "dev-check_access",
         "fideloper/proxy": "^4.0",
         "hetal/crud": "dev-master",
         "jeroen-g/laravel-packager": "^2.3",
