@@ -1,11 +1,25 @@
 {
     "name": "check/ip",
     "description": "This Package basicall checks the Visitor IP and allow access accordingly.",
+    "type": "package",
     "authors": [
         {
             "name": "Hetal Nathvani",
             "email": "hetal.nathvani@cygnetinfotech.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/packages/check/ip"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "check\\ip\\CheckIpServiceProvider"
+            ]
+        }
+    },
     "require": {}
 }
