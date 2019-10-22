@@ -4,8 +4,35 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1675f0aa686cb21c7abeb98af19213d0",
+    "content-hash": "d098053abd4872d41e142ac4def54e58",
     "packages": [
+        {
+            "name": "check/ip",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/check/ip",
+                "reference": "eada26591e00a58e78af51f31968d779c1dcd2df"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "check\\ip\\CheckIpServiceProvider"
+                    ]
+                }
+            },
+            "authors": [
+                {
+                    "name": "Hetal Nathvani",
+                    "email": "hetal.nathvani@cygnetinfotech.com"
+                }
+            ],
+            "description": "This Package basicall checks the Visitor IP and allow access accordingly.",
+            "transport-options": {
+                "symlink": true
+            }
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -5491,6 +5518,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "check/ip": 20,
         "hetal/crud": 20
     },
     "prefer-stable": true,

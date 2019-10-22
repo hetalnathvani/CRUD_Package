@@ -22,6 +22,6 @@
         }
     },
     "require": {
-        "laravelcollective/html" : "6.0.3"
+        "laravelcollective/html": "6.0.3"
     }
 }

@@ -14,18 +14,26 @@
             "options": {
                 "symlink": true
             }
+        },
+        {
+            "type": "path",
+            "url": "packages/check/ip",
+            "options": {
+                "symlink": true
+            }
         }
     ],
     "require": {
         "php": "^7.2",
+        "check/ip": "dev-master",
         "fideloper/proxy": "^4.0",
+        "hetal/crud": "dev-master",
         "jeroen-g/laravel-packager": "^2.3",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "6.0.3",
         "phpunit/phpunit": "^8.4",
-        "sebastian/global-state": "^3.0",
-        "hetal/crud": "dev-master"
+        "sebastian/global-state": "^3.0"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
