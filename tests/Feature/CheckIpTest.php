@@ -15,8 +15,7 @@ class CheckIpTest extends TestCase
      */
     public function testExample()
     {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
+        $response = $this->get('/check');
+        $response->assertSeeText("your ip address is not valid.");
     }
 }
