@@ -17,13 +17,13 @@ class CheckIpMiddleware
     public function handle($request, Closure $next)
     {
         if (!in_array(request()->getHost(), $this->whiteIps)) {
-    
+
             /*
                  You can redirect to any error page. 
             */
             return response()->json(['your ip address is not valid.']);
         }
-    
+
         return $next($request);
     }
 }

@@ -8,12 +8,6 @@
             "email": "hetal.nathvani@cygnetinfotech.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/packages/hetal/crud"
-        }
-    ],
     "extra": {
         "laravel": {
             "providers": [
