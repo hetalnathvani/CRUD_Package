@@ -28,3 +28,9 @@ Route::get('my-web', ['middleware' => ['checkIp']],  function () {
 
 // Routes for using Check IP package in this project
 Route::get('/user', 'UserController@getData');
+
+// Routes for Mutator
+Route::get('mutator/index', 'MutatorController@index');
+
+// Routes for Accessor 
+Route::get('accessor/index', 'AccessorController@index');
