@@ -25,6 +25,7 @@
     ],
     "require": {
         "php": "^7.2",
+        "barryvdh/laravel-debugbar": "^3.2",
         "check/ip": "dev-check_access",
         "fideloper/proxy": "^4.0",
         "hetal/crud": "dev-master",
