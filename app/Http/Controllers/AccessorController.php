@@ -12,6 +12,12 @@ class AccessorController extends Controller
 
     public function index()
     {
+        //Closure Demo 
+        $anoFunctionReference = function(){
+            echo "This is a type of a closure i.e. Anonymous Function";
+        };
+        $anoFunctionReference();
+
         //Closure Demo for using private variable in a function
         $functionReference = function(){
             return $this->data;
