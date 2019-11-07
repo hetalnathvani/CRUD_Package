@@ -34,3 +34,6 @@ Route::get('mutator/index', 'MutatorController@index');
 
 // Routes for Accessor 
 Route::get('accessor/index', 'AccessorController@index');
+
+// Private Page for Logged in User - Auth
+Route::get('/private', 'HomeController@private')->name('private');
