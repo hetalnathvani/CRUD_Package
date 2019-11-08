@@ -37,3 +37,11 @@ Route::get('accessor/index', 'AccessorController@index');
 
 // Private Page for Logged in User - Auth
 Route::get('/private', 'HomeController@private')->name('private');
+
+// Routes for Observer
+Route::get('item', 'ItemController@create')->name('item.create');
+Route::post('item', 'ItemController@store')->name('item.store');
+
+//Above Routes can be defined as follows too...
+// Route::get('/item', [ 'as' => 'item.create', 'uses' => 'ItemController@create']);
+// Route::post('/item/store', [ 'as' => 'item.store', 'uses' => 'ItemController@store']);
