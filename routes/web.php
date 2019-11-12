@@ -45,3 +45,8 @@ Route::post('item', 'ItemController@store')->name('item.store');
 //Above Routes can be defined as follows too...
 // Route::get('/item', [ 'as' => 'item.create', 'uses' => 'ItemController@create']);
 // Route::post('/item/store', [ 'as' => 'item.store', 'uses' => 'ItemController@store']);
+
+// Routes for Eager Loading
+Route::get('/category/create', 'CategoryController@create')->name('category.create');
+Route::post('category/store', 'CategoryController@store')->name('category.store');
+Route::get('category', 'CategoryController@index')->name('category.index');

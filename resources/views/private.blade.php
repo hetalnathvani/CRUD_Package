@@ -8,7 +8,7 @@
                 <div class="panel-heading">Private Resources</div>
 
                 <div class="panel-body">
-                    Confidential Information - Only Admin has Access to this Page.
+                    Confidential Information - Only Admin has Access.
                 </div>
             </div>
         </div>
