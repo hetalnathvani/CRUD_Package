@@ -29,16 +29,16 @@ Route::get('my-web', ['middleware' => ['checkIp']],  function () {
 // Routes for using Check IP package in this project
 Route::get('/user', 'UserController@getData');
 
-// Routes for Mutator
+// Routes of Mutator
 Route::get('mutator/index', 'MutatorController@index');
 
-// Routes for Accessor 
+// Routes of Accessor & Closure
 Route::get('accessor/index', 'AccessorController@index');
 
-// Private Page for Logged in User - Auth
+// Routes of Gate - Private Page for Logged in User - Auth
 Route::get('/private', 'HomeController@private')->name('private');
 
-// Routes for Observer
+// Routes of Observer
 Route::get('item', 'ItemController@create')->name('item.create');
 Route::post('item', 'ItemController@store')->name('item.store');
 
@@ -46,7 +46,7 @@ Route::post('item', 'ItemController@store')->name('item.store');
 // Route::get('/item', [ 'as' => 'item.create', 'uses' => 'ItemController@create']);
 // Route::post('/item/store', [ 'as' => 'item.store', 'uses' => 'ItemController@store']);
 
-// Routes for Eager Loading
+// Routes of Eager Loading and Lazy Loading
 Route::get('/category/create', 'CategoryController@create')->name('category.create');
 Route::post('category/store', 'CategoryController@store')->name('category.store');
 Route::get('category', 'CategoryController@index')->name('category.index');
