@@ -50,3 +50,6 @@ Route::post('item', 'ItemController@store')->name('item.store');
 Route::get('/category/create', 'CategoryController@create')->name('category.create');
 Route::post('category/store', 'CategoryController@store')->name('category.store');
 Route::get('category', 'CategoryController@index')->name('category.index');
+
+
+Route::get('pdfview',array('as'=>'pdfview','uses'=>'ItemController@pdfview'));
