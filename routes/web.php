@@ -51,5 +51,15 @@ Route::get('/category/create', 'CategoryController@create')->name('category.crea
 Route::post('category/store', 'CategoryController@store')->name('category.store');
 Route::get('category', 'CategoryController@index')->name('category.index');
 
-
+// Routes of Snappy PDF Demo
 Route::get('pdfview',array('as'=>'pdfview','uses'=>'ItemController@pdfview'));
+
+// Routes of Collection Demo
+Route::get('/users', function () {
+    $users = \App\User::all();
+    foreach ($users as $user) {
+        echo '<pre>';
+        echo $user->name;
+        echo '</pre>';
+    }
+});
