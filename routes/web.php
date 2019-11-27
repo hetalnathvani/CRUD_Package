@@ -1,5 +1,8 @@
 <?php
 
+use App\Facades\Person;
+use Illuminate\Support\Facades\Cache;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,7 +55,7 @@ Route::post('category/store', 'CategoryController@store')->name('category.store'
 Route::get('category', 'CategoryController@index')->name('category.index');
 
 // Routes of Snappy PDF Demo
-Route::get('pdfview',array('as'=>'pdfview','uses'=>'ItemController@pdfview'));
+Route::get('pdfview', array('as' => 'pdfview', 'uses' => 'ItemController@pdfview'));
 
 // Routes of Collection Demo
 Route::get('/users', function () {
@@ -62,4 +65,22 @@ Route::get('/users', function () {
         echo $user->name;
         echo '</pre>';
     }
+});
+
+// Routes for Facades
+Route::get('/cache', function () {
+    return Cache::get('key');
+});
+
+app()->bind('name', function () {
+    return new \App\Person\Person;
+});
+
+Route::get('/', function () {
+    // Using Person folder
+    // $person = new Person();
+    // echo $person->getName();
+
+    // Using Faacdes
+    return Person::getName();
 });
