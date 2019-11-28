@@ -76,7 +76,7 @@ app()->bind('name', function () {
     return new \App\Person\Person;
 });
 
-Route::get('/', function () {
+Route::get('/facade', function () {
     // Using Person folder
     // $person = new Person();
     // echo $person->getName();
@@ -84,3 +84,6 @@ Route::get('/', function () {
     // Using Faacdes
     return Person::getName();
 });
+
+// Routes for Mail
+Route::get('/send/email', 'HomeController@mail');

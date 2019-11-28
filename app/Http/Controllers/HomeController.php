@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Gate;
+use App\Mail\SendMailable;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -31,11 +32,19 @@ class HomeController extends Controller
      * Show the application private resources.
      *
      * @return \Illuminate\Http\Response
-    */
+     */
     public function private()
     {
         if (Gate::allows('admin-only', auth()->user())) {
             return view('private');
         }
+    }
+
+    public function mail()
+    {
+        $name = 'Hetal';
+        Mail::to('hetal.nathvani@cygnetinfotech.com')->send(new SendMailable($name));
+
+        return 'Email was sent';
     }
 }
