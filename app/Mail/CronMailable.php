@@ -6,19 +6,19 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class SendMailable extends Mailable
+class CronMailable extends Mailable
 {
     use Queueable, SerializesModels;
-    public $name;
+    public $count;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($name)
+    public function __construct($count)
     {
-        $this->name = $name;
+        $this->count = $count;
     }
 
     /**
@@ -28,6 +28,6 @@ class SendMailable extends Mailable
      */
     public function build()
     {
-        return $this->view('email.name');
+        return $this->view('email.registeredcount');
     }
 }
