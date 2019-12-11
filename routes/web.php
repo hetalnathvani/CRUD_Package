@@ -2,6 +2,7 @@
 
 use App\Facades\Person;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
