@@ -34,6 +34,7 @@
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "6.0.3",
+        "nwidart/laravel-modules": "^6.2",
         "phpunit/phpunit": "^8.4",
         "sebastian/global-state": "^3.0"
     },
@@ -59,7 +60,8 @@
         "psr-4": {
             "App\\": "app/",
             "hetal\\crud\\": "packages/hetal/crud/src",
-            "check\\ip\\": "packages/check/ip/src"
+            "check\\ip\\": "packages/check/ip/src",
+            "Modules\\": "Modules/"
         },
         "classmap": [
             "database",

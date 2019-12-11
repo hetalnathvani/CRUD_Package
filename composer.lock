@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "edf8ad1b65a721d6bca281b5884f0773",
+    "content-hash": "9564b0e685160cfc474475d6ab727328",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -1013,16 +1013,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v6.3.0",
+            "version": "v6.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "80914c430fb5e49f492812d704ba6aeec03d80a2"
+                "reference": "ba4204f3a8b9672b6116398c165bd9c0c6eac077"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/80914c430fb5e49f492812d704ba6aeec03d80a2",
-                "reference": "80914c430fb5e49f492812d704ba6aeec03d80a2",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/ba4204f3a8b9672b6116398c165bd9c0c6eac077",
+                "reference": "ba4204f3a8b9672b6116398c165bd9c0c6eac077",
                 "shasum": ""
             },
             "require": {
@@ -1118,7 +1118,7 @@
                 "league/flysystem-sftp": "Required to use the Flysystem SFTP driver (^1.0).",
                 "moontoast/math": "Required to use ordered UUIDs (^1.1).",
                 "pda/pheanstalk": "Required to use the beanstalk queue driver (^4.0).",
-                "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0)",
+                "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
                 "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (^4.0).",
                 "symfony/cache": "Required to PSR-6 cache bridge (^4.3.4).",
                 "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^1.2).",
@@ -1155,7 +1155,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-10-15T13:38:24+00:00"
+            "time": "2019-12-10T16:01:57+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1679,6 +1679,77 @@
                 "php"
             ],
             "time": "2019-09-01T07:51:21+00:00"
+        },
+        {
+            "name": "nwidart/laravel-modules",
+            "version": "6.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nWidart/laravel-modules.git",
+                "reference": "6dc702eeb5d025b4cd331bc394e47ccc43b68e89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nWidart/laravel-modules/zipball/6dc702eeb5d025b4cd331bc394e47ccc43b68e89",
+                "reference": "6dc702eeb5d025b4cd331bc394e47ccc43b68e89",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.15",
+                "laravel/framework": "6.0.*",
+                "mockery/mockery": "~1.0",
+                "orchestra/testbench": "^4.0",
+                "phpstan/phpstan": "^0.9.2",
+                "phpunit/phpunit": "~7.0|~8.0",
+                "spatie/phpunit-snapshot-assertions": "^2.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Nwidart\\Modules\\LaravelModulesServiceProvider"
+                    ],
+                    "aliases": {
+                        "Module": "Nwidart\\Modules\\Facades\\Module"
+                    }
+                },
+                "branch-alias": {
+                    "dev-master": "6.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nwidart\\Modules\\": "src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Widart",
+                    "email": "n.widart@gmail.com",
+                    "homepage": "https://nicolaswidart.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel Module management",
+            "keywords": [
+                "laravel",
+                "module",
+                "modules",
+                "nwidart",
+                "rad"
+            ],
+            "time": "2019-11-12T18:38:48+00:00"
         },
         {
             "name": "opis/closure",
