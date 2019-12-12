@@ -1,6 +1,7 @@
 <?php
 
 use App\Facades\Person;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;
 
@@ -21,7 +22,7 @@ Route::get('/', function () {
 });
 
 // Routes of Auth by Laravel 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -88,3 +89,12 @@ Route::get('/facade', function () {
 
 // Routes for Mail
 Route::get('/send/email', 'HomeController@mail');
+
+// Routes for Email Verification
+Route::get('profile', function () {
+    // Only verified users may enter...
+})->middleware('verified');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
