@@ -98,3 +98,6 @@ Route::get('profile', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Routes for Inertia Vue Set up
+Route::get('/dashboard', 'DashboardController@index');
