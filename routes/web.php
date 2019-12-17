@@ -4,6 +4,7 @@ use App\Facades\Person;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -101,3 +102,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Routes for Inertia Vue Set up
 Route::get('/dashboard', 'DashboardController@index');
+
+Route::get('/welcome', function(){
+    return Inertia::render('Welcome');
+});
+
+Route::get('/about', function(){
+    return Inertia::render('About');
+});
+
+Route::get('/contact', function(){
+    return Inertia::render('Contact');
+});
